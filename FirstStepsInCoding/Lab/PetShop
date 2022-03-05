@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class PetShop {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        /*
+        Напишете програма, която пресмята нужните разходи за закупуването на храна за кучета. Храната се
+        пазарува основно за кучета, от зоомагазин, но понякога стопанинът им купува и за животните на съседа му.
+        Една опаковка храна за кучета е на цена 2.50лв., а всяка друга, която не е за тях струва 4лв.
+        */
+
+        int numberOfOwnedDogs = Integer.parseInt(scanner.nextLine());
+        int numberOfNeighboursDogs = Integer.parseInt(scanner.nextLine());
+
+        double total = (numberOfOwnedDogs * 2.5) + (numberOfNeighboursDogs * 4);
+
+        System.out.printf("%s lv.", total);
+    }
+}
