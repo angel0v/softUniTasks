@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class YardGreening {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        /*
+        Божидара разполага с няколко къщи на черноморието и желае да озелени дворовете на някои от тях, като
+        по този начин създаде уютна обстановка и комфорт на гостите си, като за целта е наела фирма.
+        Напишете програма, която изчислява необходимите средства, които Божидара ще трябва да заплати на
+        фирмата изпълнител на проекта. Цената на един кв. м. е 7.61лв със ДДС. Тъй като нейният двор е доста
+        голям, фирмата изпълнител предлага 18% отстъпка от крайната цена.
+
+        Да се отпечата следното:
+        The final price is: {крайна цена на услугата} lv.
+        The discount is: {крайна отстъпка на услугата} lv.
+         */
+
+        double yardSize = Double.parseDouble(scanner.nextLine());
+        
+        double sqmPrice = yardSize * 7.61 - yardSize * 7.61 * 0.18;
+        double discount = yardSize * 7.61 * 0.18;
+
+        System.out.printf("The final price is: %s lv.", sqmPrice);
+        System.out.println();
+        System.out.printf("The discount is: %s lv.", discount);
+    }
+}
