@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class SquareArea {
+    public static void main(String[] args) {
+        /*
+        1. Въвеждаме стойност за страната - променлива
+        2. Пресмятане лице на квадрат - едната страна умножена по другата
+        3. Отпечатване на резултата
+         */
+
+        Scanner scanner = new Scanner(System.in);
+
+        int side = Integer.parseInt(scanner.nextLine());
+
+        int area = side * side;
+
+        System.out.print(area);
+    }
+}
