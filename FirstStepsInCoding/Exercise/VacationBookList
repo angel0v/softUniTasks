@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class VacationBookList {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int numberOfPages = Integer.parseInt(scanner.nextLine());
+        int pagesPerHour = Integer.parseInt(scanner.nextLine());
+        int numberOfDays = Integer.parseInt(scanner.nextLine());
+
+        int totalHoursPerDay = numberOfPages / pagesPerHour / numberOfDays;
+
+        System.out.print(totalHoursPerDay);
+    }
+}
