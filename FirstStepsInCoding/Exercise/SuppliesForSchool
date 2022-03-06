@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class SuppliesForSchool {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int rentHall = Integer.parseInt(scanner.nextLine());
+
+        double cakePrice = (double) rentHall * 0.2D;
+        double drinks = cakePrice - cakePrice * 0.45D;
+        double animator = rentHall / (double) 3;
+        double totalBudget = (double) rentHall + cakePrice + drinks + animator;
+
+        System.out.print(totalBudget);
+    }
+}
