@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class FoodDelivery {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double strawberries = Double.parseDouble(scanner.nextLine());
+        double bananasKg = Double.parseDouble(scanner.nextLine());
+        double orangesKg = Double.parseDouble(scanner.nextLine());
+        double raspberriesKg = Double.parseDouble(scanner.nextLine());
+        double strawberriesKg = Double.parseDouble(scanner.nextLine());
+
+        double raspberries = strawberries / 2.0D;
+        double oranges = raspberries - raspberries * 0.4D;
+        double bananas = raspberries - raspberries * 0.8D;
+
+        double totalPrice = strawberries * strawberriesKg + raspberries
+                * raspberriesKg + oranges * orangesKg + bananas * bananasKg;
+
+        System.out.printf("%.2f", totalPrice);
+    }
+}
