@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Repainting {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int days = Integer.parseInt(scanner.nextLine());
+        int confectioners = Integer.parseInt(scanner.nextLine());
+        int cakes = Integer.parseInt(scanner.nextLine());
+        int waffles = Integer.parseInt(scanner.nextLine());
+        int pancakes = Integer.parseInt(scanner.nextLine());
+
+        double income = (double) (cakes * 45) + (double) waffles * 5.8D + (double) pancakes * 3.2D;
+        double dailySum = (double) confectioners * income;
+        double totalCampaign = (double) days * dailySum;
+        double totalAfterTax = totalCampaign - totalCampaign / 8.0D;
+
+        System.out.printf("%.2f", totalAfterTax);
+
+    }
+}
