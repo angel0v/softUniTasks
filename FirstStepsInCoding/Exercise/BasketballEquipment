@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class BasketballEquipment {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int tankLength = Integer.parseInt(scanner.nextLine());
+        int tankWidth = Integer.parseInt(scanner.nextLine());
+        int tankHeight = Integer.parseInt(scanner.nextLine());
+
+        double tankOccupiedPercent = Double.parseDouble(scanner.nextLine());
+        double totalTankCapacity = (double) (tankLength * tankWidth * tankHeight) / 1000.0D;
+        double finalTankCapacity = totalTankCapacity - totalTankCapacity * tankOccupiedPercent / 100.0D;
+
+        System.out.printf("%.2f", finalTankCapacity);
+    }
+}
